@@ -20,27 +20,29 @@ def makeOutputImage(input, output):
 def getStringFromKeyPoint(kp):
 	return str(kp.octave)
 
-def getMatchingImage(queryImagePath, trainImagePath):
-	# http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_matcher/py_matcher.html
+def getDescriptor(img):
+	sift = cv2.xfeatures2d.SIFT_create()
+	kp, des = sift.detectAndCompute(img, None)
+	return des
 
-	img1 = cv2.imread(queryImagePath,0)
-	img2 = cv2.imread(trainImagePath,0)
+def getMatches(descriptor1, descriptor2):
+	FLANN_INDEX_KDTREE = 0
+	index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
+	search_params = dict(checks = 50)   # or pass empty dictionary
+	flann = cv2.FlannBasedMatcher(index_params,search_params)
+	return flann.knnMatch(descriptor1, descriptor2, k=2)
+
+def getMatchingImage(queryImagePath, trainImagePath):
+	# REFERENCE : http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_matcher/py_matcher.html
 
 	# Initiate SIFT detector
 	sift = cv2.xfeatures2d.SIFT_create()
 
 	# find the keypoints and descriptors with SIFT
-	kp1, des1 = sift.detectAndCompute(img1,None)
-	kp2, des2 = sift.detectAndCompute(img2,None)
+	kp1, des1 = sift.detectAndCompute(cv2.imread(queryImagePath,0), None)
+	kp2, des2 = sift.detectAndCompute(cv2.imread(trainImagePath,0), None)
 
-	# FLANN parameters
-	FLANN_INDEX_KDTREE = 0
-	index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
-	search_params = dict(checks=50)   # or pass empty dictionary
-
-	flann = cv2.FlannBasedMatcher(index_params,search_params)
-
-	matches = flann.knnMatch(des1,des2,k=2)
+	matches = getMatches(des1, des2)
 
 	# Need to draw only good matches, so create a mask
 	matchesMask = [[0,0] for i in range(len(matches))]
@@ -60,32 +62,47 @@ def getMatchingImage(queryImagePath, trainImagePath):
 def drawMatchingImage(queryImagePath, trainImagePath, outputPath):
 	cv2.imwrite(outputPath, getMatchingImage(queryImagePath, trainImagePath))
 
+def encode(descriptor):
+	return descriptor.tostring()
+
+def decode(descriptorString):
+	return np.fromstring(descriptorString, dtype = np.float32)
+
+def lsh(descriptor):
+	# print(type(descriptor[0][0]))
+	print(descriptor[0:2])
+	print(encode(descriptor[0:2]))
+	print(decode(encode(descriptor[0:2])))
+	return descriptor[0:100]
+
+
+	print(descriptor[::2][0:3])
+	return descriptor[::2]
+	output = []
+	# print([descriptor[0].tolist()])
+	# return descriptor
+	for row in descriptor:
+		output.append(row[0:4].toList())
+	print(output)
+	return output
+
+
 def getSimilarity(queryImagePath, trainImagePath):
-	img1 = cv2.imread(queryImagePath,0)
-	img2 = cv2.imread(trainImagePath,0)
+	des1 = getDescriptor(cv2.imread(queryImagePath,0))
+	des2 = getDescriptor(cv2.imread(trainImagePath,0))
 
-	# Initiate SIFT detector
-	sift = cv2.xfeatures2d.SIFT_create()
+	# print(len(des1))
+	# print(len(des1[0]))
+	# print(len(des2))
+	# print(len(des2[0]))
 
-	# find the keypoints and descriptors with SIFT
-	kp1, des1 = sift.detectAndCompute(img1,None)
-	kp2, des2 = sift.detectAndCompute(img2,None)
-
-	# FLANN parameters
-	FLANN_INDEX_KDTREE = 0
-	index_params = dict(algorithm = FLANN_INDEX_KDTREE, trees = 5)
-	search_params = dict(checks=50)   # or pass empty dictionary
-
-	flann = cv2.FlannBasedMatcher(index_params,search_params)
-
-	matches = flann.knnMatch(des1,des2,k=2)
+	matches = getMatches(lsh(des1), lsh(des2))
 
 	goodCount = 0
 	badCount = 0
 
-	# ratio test as per Lowe's paper
 	for i,(m,n) in enumerate(matches):
-	    if m.distance < 0.7*n.distance:
+	    if m.distance < 0.7 * n.distance:
 	    	goodCount = goodCount + 1
 	    else:
 	    	badCount = badCount + 1
