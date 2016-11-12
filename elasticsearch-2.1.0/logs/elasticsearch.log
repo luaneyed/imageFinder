@@ -1,0 +1,107 @@
+[2016-11-12 02:10:25,726][INFO ][node                     ] [Paige Guthrie] version[2.1.0], pid[539], build[72cd1f1/2015-11-18T22:40:03Z]
+[2016-11-12 02:10:25,727][INFO ][node                     ] [Paige Guthrie] initializing ...
+[2016-11-12 02:10:25,783][INFO ][plugins                  ] [Paige Guthrie] loaded [], sites []
+[2016-11-12 02:10:25,810][INFO ][env                      ] [Paige Guthrie] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [197gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2016-11-12 02:10:27,910][INFO ][node                     ] [Paige Guthrie] initialized
+[2016-11-12 02:10:27,910][INFO ][node                     ] [Paige Guthrie] starting ...
+[2016-11-12 02:10:28,047][INFO ][transport                ] [Paige Guthrie] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2016-11-12 02:10:28,071][INFO ][discovery                ] [Paige Guthrie] elasticsearch/hhURwVcuQ-WzrBBABC03DA
+[2016-11-12 02:10:31,108][INFO ][cluster.service          ] [Paige Guthrie] new_master {Paige Guthrie}{hhURwVcuQ-WzrBBABC03DA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-12 02:10:31,122][INFO ][http                     ] [Paige Guthrie] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2016-11-12 02:10:31,122][INFO ][node                     ] [Paige Guthrie] started
+[2016-11-12 02:10:31,149][INFO ][gateway                  ] [Paige Guthrie] recovered [0] indices into cluster_state
+[2016-11-12 02:11:14,136][INFO ][node                     ] [Paige Guthrie] stopping ...
+[2016-11-12 02:11:14,145][INFO ][node                     ] [Paige Guthrie] stopped
+[2016-11-12 02:11:14,146][INFO ][node                     ] [Paige Guthrie] closing ...
+[2016-11-12 02:11:14,150][INFO ][node                     ] [Paige Guthrie] closed
+[2016-11-12 02:11:18,200][INFO ][node                     ] [Sluk] version[2.1.0], pid[575], build[72cd1f1/2015-11-18T22:40:03Z]
+[2016-11-12 02:11:18,200][INFO ][node                     ] [Sluk] initializing ...
+[2016-11-12 02:11:18,257][INFO ][plugins                  ] [Sluk] loaded [], sites []
+[2016-11-12 02:11:18,275][INFO ][env                      ] [Sluk] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [197gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2016-11-12 02:11:19,718][INFO ][node                     ] [Sluk] initialized
+[2016-11-12 02:11:19,718][INFO ][node                     ] [Sluk] starting ...
+[2016-11-12 02:11:19,840][INFO ][transport                ] [Sluk] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2016-11-12 02:11:19,849][INFO ][discovery                ] [Sluk] elasticsearch/V-7sTXsOS1GOBT_-7dBhBQ
+[2016-11-12 02:11:22,902][INFO ][cluster.service          ] [Sluk] new_master {Sluk}{V-7sTXsOS1GOBT_-7dBhBQ}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-12 02:11:22,923][INFO ][http                     ] [Sluk] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2016-11-12 02:11:22,924][INFO ][node                     ] [Sluk] started
+[2016-11-12 02:11:22,946][INFO ][gateway                  ] [Sluk] recovered [0] indices into cluster_state
+[2016-11-12 02:15:52,057][INFO ][node                     ] [Sluk] stopping ...
+[2016-11-12 02:15:52,066][INFO ][node                     ] [Sluk] stopped
+[2016-11-12 02:15:52,066][INFO ][node                     ] [Sluk] closing ...
+[2016-11-12 02:15:52,073][INFO ][node                     ] [Sluk] closed
+[2016-11-12 14:41:58,376][INFO ][node                     ] [Swarm] version[2.1.0], pid[915], build[72cd1f1/2015-11-18T22:40:03Z]
+[2016-11-12 14:41:58,377][INFO ][node                     ] [Swarm] initializing ...
+[2016-11-12 14:41:58,431][INFO ][plugins                  ] [Swarm] loaded [], sites []
+[2016-11-12 14:41:58,460][INFO ][env                      ] [Swarm] using [1] data paths, mounts [[/ (/dev/disk1)]], net usable_space [197gb], net total_space [232.6gb], spins? [unknown], types [hfs]
+[2016-11-12 14:42:00,380][INFO ][node                     ] [Swarm] initialized
+[2016-11-12 14:42:00,381][INFO ][node                     ] [Swarm] starting ...
+[2016-11-12 14:42:00,561][INFO ][transport                ] [Swarm] publish_address {127.0.0.1:9300}, bound_addresses {127.0.0.1:9300}, {[fe80::1]:9300}, {[::1]:9300}
+[2016-11-12 14:42:00,575][INFO ][discovery                ] [Swarm] elasticsearch/Gq9RPetKQayAtlD_Cyhl-A
+[2016-11-12 14:42:03,620][INFO ][cluster.service          ] [Swarm] new_master {Swarm}{Gq9RPetKQayAtlD_Cyhl-A}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-join(elected_as_master, [0] joins received)
+[2016-11-12 14:42:03,634][INFO ][http                     ] [Swarm] publish_address {127.0.0.1:9200}, bound_addresses {127.0.0.1:9200}, {[fe80::1]:9200}, {[::1]:9200}
+[2016-11-12 14:42:03,634][INFO ][node                     ] [Swarm] started
+[2016-11-12 14:42:03,656][INFO ][gateway                  ] [Swarm] recovered [0] indices into cluster_state
+[2016-11-12 14:42:16,473][INFO ][rest.suppressed          ] /sdf Params: {index=sdf}
+[sdf] IndexNotFoundException[no such index]
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver$WildcardExpressionResolver.resolve(IndexNameExpressionResolver.java:566)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:133)
+	at org.elasticsearch.cluster.metadata.IndexNameExpressionResolver.concreteIndices(IndexNameExpressionResolver.java:77)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:64)
+	at org.elasticsearch.action.admin.indices.get.TransportGetIndexAction.checkBlock(TransportGetIndexAction.java:48)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.innerExecute(TransportMasterNodeAction.java:94)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:86)
+	at org.elasticsearch.action.support.master.TransportMasterNodeAction.doExecute(TransportMasterNodeAction.java:48)
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:70)
+	at org.elasticsearch.client.node.NodeClient.doExecute(NodeClient.java:58)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:347)
+	at org.elasticsearch.client.FilterClient.doExecute(FilterClient.java:52)
+	at org.elasticsearch.rest.BaseRestHandler$HeadersAndContextCopyClient.doExecute(BaseRestHandler.java:83)
+	at org.elasticsearch.client.support.AbstractClient.execute(AbstractClient.java:347)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.execute(AbstractClient.java:1183)
+	at org.elasticsearch.client.support.AbstractClient$IndicesAdmin.getIndex(AbstractClient.java:1283)
+	at org.elasticsearch.rest.action.admin.indices.get.RestGetIndicesAction.handleRequest(RestGetIndicesAction.java:83)
+	at org.elasticsearch.rest.BaseRestHandler.handleRequest(BaseRestHandler.java:54)
+	at org.elasticsearch.rest.RestController.executeHandler(RestController.java:207)
+	at org.elasticsearch.rest.RestController.dispatchRequest(RestController.java:166)
+	at org.elasticsearch.http.HttpServer.internalDispatchRequest(HttpServer.java:128)
+	at org.elasticsearch.http.HttpServer$Dispatcher.dispatchRequest(HttpServer.java:86)
+	at org.elasticsearch.http.netty.NettyHttpServerTransport.dispatchRequest(NettyHttpServerTransport.java:348)
+	at org.elasticsearch.http.netty.HttpRequestHandler.messageReceived(HttpRequestHandler.java:63)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:60)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpChunkAggregator.messageReceived(HttpChunkAggregator.java:145)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.elasticsearch.common.netty.OpenChannelsHandler.handleUpstream(OpenChannelsHandler.java:75)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:337)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)

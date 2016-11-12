@@ -25,6 +25,7 @@ def getMatches(descriptor1, descriptor2):
 	return flann.knnMatch(descriptor1, descriptor2, k=2)
 
 def encode(descriptor):
+	print('encoding length : %d' % (len(descriptor.tostring())))
 	return descriptor.tostring()
 
 def decode(descriptorString):
@@ -83,7 +84,13 @@ def getSimilarity(des1, des2):
 
 	for i,(m,n) in enumerate(getMatches(des1, des2)):
 
-		if m.distance < 0.7 * n.distance:
+		# print('m %f , n %f' % (m.distance, n.distance))
+		if m.distance == 0:
+				if n.distance == 0:
+					point = point + 10000
+				else:
+					point = point + (m.distance / n.distance)
+		elif m.distance < 0.7 * n.distance:
 			# print('%f %f %f' % (m.distance / n.distance, m.distance, n.distance))
 			point = point + (n.distance / m.distance) ** 3
 			# goodCount = goodCount + 1
@@ -123,7 +130,7 @@ def search(queryDescriptor, db):
 
 db = []
 
-rootDir = os.getcwd() + '/../images/4088'
+rootDir = os.getcwd() + '/../images/4094'
 for dirName, subdirList, fileList in os.walk(rootDir):
     print('Found directory: %s' % dirName)
     for fname in fileList:
@@ -140,7 +147,7 @@ print('start finding')
 candidates = sorted(search(hash(getDescriptor(cv2.imread(sys.argv[1], 0))), db), key = itemgetter(1), reverse = True)
 maxScore = candidates[0][1]
 for i in range(1, len(candidates)):
-	if candidates[i][1] < min(1000, maxScore / 4):
+	if candidates[i][1] < min(80, maxScore - 10):
 		for answer in candidates[:i]:
 			print('\tsimilarity point : %f , path : %s' % (answer[1], answer[0]))
 		break
